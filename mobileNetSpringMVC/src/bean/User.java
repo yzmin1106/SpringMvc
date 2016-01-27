@@ -1,30 +1,26 @@
 package bean;
-
 public class User {
-
-	public String name;
-	public String weight;
-	
-	public String getName() {
-		return name;
+	private String userName;
+	private String password;
+	private String realName;
+	public String getUserName() {
+		return userName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
-	public String getWeight() {
-		return weight;
+	public String getPassword() {
+		return password;
 	}
-	public void setWeight(String weight) {
-		this.weight = weight;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	@Override
-	public String toString() {
-		
-		return "-------------------->{“name”:“"+this.name+"”,“weight“:”"+this.weight+"”}";
+	public String getRealName() {
+		return realName;
 	}
-	
-	
-	
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
 	
 	
 }
