@@ -1,12 +1,17 @@
 <%@ page language="java"  pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="st" uri="http://www.springframework.org/tags" %>
+
 <html>
   <head>
+ 
+  <%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>  <base href="<%=basePath%>">
    <title>新增用户</title>
   </head>
   <body>
-  	<form action="<st:url value="/user/addUser"/>" method="post">
+  	<form action="<%=basePath%>/u/addUser.do" method="post">
   		<table>
   			<tr>
   				<td>用户名:</td>
